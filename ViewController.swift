@@ -12,15 +12,22 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var coolLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
+    
+    
     
 
-    @IBAction func ButtonTapped(_ sender: Any) {
-        tapCount = tapCount + 1
-        if tapCount >= 20 {
-            coolLabel.text = "You tapped the button 20 times"
+    @IBAction func ButtonTapped(_ sender: AnyObject) {
+        
+    
+        coolLabel.text = "Answer: \(Double( Text1.text!)! + Double(Text2.text!)!)"
+    
+    
+        
         }
-    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
